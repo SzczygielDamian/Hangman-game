@@ -1,0 +1,116 @@
+*{
+    box-sizing:border-box;
+}
+
+body {
+    background-color: #000;
+    color: #d3d3d3;
+    font-size: 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+#game-board{
+    width: 900px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.game-password {
+    text-transform: uppercase;
+    width: 2rem;
+    height: 2rem;
+    background: #fefefe;
+    border: 1px solid #ddd;
+    margin: 1rem 0.5rem 2rem;
+    font-size: 2rem;
+    font-family: 'Inconsolata', serif;
+    font-weight: 700;
+    color: #333;
+    vertical-align: top;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-password-space {
+    border: 0;
+    background: none;
+    box-shadow: none;
+}
+#gallows{
+    float: left;
+    width: 50%;
+    text-align: center;
+    min-height: 280px;
+}
+
+#alphabet{
+    float: left;
+    width: 50%;
+    text-align: center;
+    min-height: 280px;
+    display: inline-flex;
+}
+
+.letter {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid #d3d3d3;
+    float: left;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform:uppercase;
+    background: #fff;
+    font-family: 'Inconsolata', serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.hit-letter {
+    background: #53ae13;
+    border: 3px solid #53ae13;
+}
+
+.mis-letter {
+    background: #ae2f3e;
+    border: 3px solid #ae2f3e;
+}
+
+.letter:hover {
+    background-color: #222222;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+button.button,
+input[type=button].button,
+input[type=submit].button {
+    padding: 0.8em 3em;
+    background: #fff;
+    color: #222222;
+    border: 0;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    transition: 0.5s background-color, 0.5s box-shadow;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    margin: 5rem auto 1rem;
+}
+@media (orientation: portrait) {
+    div {
+        flex-basis: 30%;
+        height: 16.66vh;
+    }
+}
