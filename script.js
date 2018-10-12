@@ -20,7 +20,7 @@ const game = {
            const button = document.createElement('button');
            button.classList.add('letter');
            button.getElementsByTagName('');
-           button.setAttribute("id", letter.toUpperCase());
+           button.setAttribute('id', letter.toUpperCase());
            button.type = 'button';
            button.dataset.letter = letter;
            button.innerHTML = letter;
@@ -57,9 +57,8 @@ const game = {
     },
 
     checkLettersInPassword : function(letter) {
-        console.log(letter);
         if (this.currentPassword.indexOf(letter) !== -1) {
-            for (let i=0; i<this.currentPassword.length; i++) {
+            for (let i = 0; i < this.currentPassword.length; i++) {
                 if (this.currentPassword[i] === letter) {
                     this.elemPassword.querySelectorAll('.game-password')[i].innerHTML = letter;
                     const buttonLetter = document.getElementById(letter);
@@ -72,7 +71,7 @@ const game = {
             if (!this.isLetterExists()) {
                 this.gameComplete();
             }
-            } else {
+        } else {
                 this.mishit++;
                 console.log(this.mishit);
                 let picture = "img/s"+ this.mishit + ".jpg";
@@ -82,13 +81,13 @@ const game = {
                 if (this.mishit >= 9) {
                     this.gameOver();
                 }
-            }
+        }
     },
 
     randomPassword : function() {
-        const max = this.password.length-1;
+        const max = this.password.length - 1;
         const min = 0;
-        const rand = Math.floor(Math.random()*(max-min+1)+min);
+        const rand = Math.floor(Math.random()*(max - min + 1) + min);
 
         this.currentPassword = this.password[rand].toUpperCase();
         this.currentPasswordLetters = this.currentPassword.replace(/ /g, '');
